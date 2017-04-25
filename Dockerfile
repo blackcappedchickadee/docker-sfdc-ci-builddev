@@ -34,5 +34,7 @@ RUN wget https://github.com/blackcappedchickadee/docker-sfdc-ci-builddev/raw/mas
 RUN wget https://github.com/blackcappedchickadee/docker-sfdc-ci-builddev/raw/master/build.properties -P /usr/local/sfdc-build/
 RUN wget https://github.com/blackcappedchickadee/docker-sfdc-ci-builddev/raw/master/package.xml -P /usr/local/sfdc-build/
 
-RUN ant -buildfile /usr/local/sfdc-build/build.xml validateAndTestCodeOnlyNoDeploy -Dsfdc.username=SFDC_USERNAME -Dsfdc.password=SFDC_PASSWORDSFDC_TOKEN -Dsfdc.serverurl=SFDC_SERVERURL
+RUN ant -buildfile /usr/local/sfdc-build/build.xml banner -Dsfdc.username=SFDC_USERNAME -Dsfdc.password=SFDC_PASSWORDSFDC_TOKEN -Dsfdc.serverurl=SFDC_SERVERURL -Dsfdc.apiversion=SALESFORCE_API_VERSION
+
+# RUN ant -buildfile /usr/local/sfdc-build/build.xml validateAndTestCodeOnlyNoDeploy -Dsfdc.username=SFDC_USERNAME -Dsfdc.password=SFDC_PASSWORDSFDC_TOKEN -Dsfdc.serverurl=SFDC_SERVERURL -Dsfdc.apiversion=SALESFORCE_API_VERSION
 
