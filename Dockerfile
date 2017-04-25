@@ -26,6 +26,7 @@ ENV SFDC_TOKEN testtoken
 ENV SFDC_SERVERURL https://test.salesforce.com
 
 RUN mkdir /usr/local/sfdc-build
+RUN mkdir /usr/local/sfdc-build/src
 RUN wget https://github.com/dancinllama/ant-salesforce/raw/master/ant-salesforce_${SALESFORCE_API_VERSION}.jar -P /usr/local/sfdc-build/
 RUN wget https://github.com/dancinllama/DockerApexDoc/raw/master/apexdoc.jar -P /usr/local/sfdc-build/
 
@@ -33,5 +34,5 @@ RUN wget https://github.com/blackcappedchickadee/docker-sfdc-ci-builddev/raw/mas
 RUN wget https://github.com/blackcappedchickadee/docker-sfdc-ci-builddev/raw/master/build.properties -P /usr/local/sfdc-build/
 RUN wget https://github.com/blackcappedchickadee/docker-sfdc-ci-builddev/raw/master/package.xml -P /usr/local/sfdc-build/
 
-# RUN ant -buildfile /usr/local/sfdc-build/build.xml validateAndTestCodeOnlyNoDeploy -Dsfdc.username=SFDC_USERNAME -Dsfdc.password=SFDC_PASSWORDSFDC_TOKEN -Dsfdc.serverurl=SFDC_SERVERURL
+RUN ant -buildfile /usr/local/sfdc-build/build.xml validateAndTestCodeOnlyNoDeploy -Dsfdc.username=SFDC_USERNAME -Dsfdc.password=SFDC_PASSWORDSFDC_TOKEN -Dsfdc.serverurl=SFDC_SERVERURL
 
