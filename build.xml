@@ -2,9 +2,9 @@
 
     <taskdef uri="antlib:com.salesforce"
              resource="com/salesforce/antlib.xml"
-             classpath="${basedir}/ant-salesforce.jar"/>
+             classpath="ant-salesforce.jar"/>
 
-    <property file="${basedir}/build.properties"/>
+    <property file="build.properties"/>
     <property environment="env"/>
 
     <!-- Make sure the tests all pass on this instance. Shows check only; never actually saves to the server -->
