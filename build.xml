@@ -8,8 +8,8 @@
     <property environment="env"/>
 
     <!-- Make sure the tests all pass on this instance. Shows check only; never actually saves to the server -->
-    <target name="deployEmptyCheckOnly">
-        <echo level="info">Testing the deploy</echo>
+    <target name="validateAndTestCodeOnlyNoDeploy">
+        <echo level="info">Validation of the Org - via testLevel=RunLocalTests and checkOnly=true</echo>
         <sf:deploy
                 checkOnly="true"
                 logType="Debugonly"
