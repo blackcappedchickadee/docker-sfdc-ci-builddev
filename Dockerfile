@@ -21,6 +21,6 @@ ENV ANT_HOME /usr/share/java/apache-ant
 ENV SALESFORCE_API_VERSION 38
 
 RUN cd /usr/local
-RUN mkdir sfdc-build
-RUN wget https://github.com/dancinllama/ant-salesforce/raw/master/ant-salesforce_${SALESFORCE_API_VERSION}.jar
-RUN wget https://github.com/dancinllama/DockerApexDoc/raw/master/apexdoc.jar
+RUN mkdir /usr/local/sfdc-build
+RUN wget https://github.com/dancinllama/ant-salesforce/raw/master/ant-salesforce_${SALESFORCE_API_VERSION}.jar -P /usr/local/sfdc-build/
+RUN wget https://github.com/dancinllama/DockerApexDoc/raw/master/apexdoc.jar -P /usr/local/sfdc-build/
