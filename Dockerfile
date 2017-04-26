@@ -28,7 +28,7 @@ ENV SFDC_SERVERURL https://test.salesforce.com
 RUN mkdir /usr/local/sfdc-build
 RUN mkdir /usr/local/sfdc-build/src
 RUN mkdir /usr/local/sfdc-build/src/pages
-RUN echo '<apex:page></apex:page>' >> /usr/local/sfdc-build/src/pages/x_noDeploy.page;
+RUN echo '<apex:page label="no_deploy"></apex:page>' >> /usr/local/sfdc-build/src/pages/x_noDeploy.page;
 
 RUN wget https://github.com/dancinllama/ant-salesforce/raw/master/ant-salesforce_${SALESFORCE_API_VERSION}.jar -P /usr/local/sfdc-build/
 RUN wget https://github.com/dancinllama/DockerApexDoc/raw/master/apexdoc.jar -P /usr/local/sfdc-build/
