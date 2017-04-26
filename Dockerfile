@@ -29,7 +29,7 @@ RUN mkdir /usr/local/sfdc-build
 RUN mkdir /usr/local/sfdc-build/src
 RUN mkdir /usr/local/sfdc-build/src/pages
 RUN echo '<apex:page id="xNoDeploy"></apex:page>' >> /usr/local/sfdc-build/src/pages/xNoDeploy.page;
-RUN echo '<?xml version="1.0" encoding="UTF-8"?><ApexPage xmlns="http://soap.sforce.com/2006/04/metadata"><apiVersion>39.0</apiVersion><label>xNoDeploy</label></ApexPage>' >> /usr/local/sfdc-build/src/pages/xNoDeploy.page-meta.xml;
+RUN echo '<?xml version="1.0" encoding="UTF-8"?><ApexPage xmlns="http://soap.sforce.com/2006/04/metadata"><apiVersion>39.0</apiVersion><availableInTouch>false</availableInTouch><confirmationTokenRequired>false</confirmationTokenRequired><label>xNoDeploy</label></ApexPage>' >> /usr/local/sfdc-build/src/pages/xNoDeploy.page-meta.xml;
 
 RUN wget https://github.com/dancinllama/ant-salesforce/raw/master/ant-salesforce_${SALESFORCE_API_VERSION}.jar -P /usr/local/sfdc-build/
 RUN wget https://github.com/dancinllama/DockerApexDoc/raw/master/apexdoc.jar -P /usr/local/sfdc-build/
