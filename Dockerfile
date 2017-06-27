@@ -1,8 +1,7 @@
 FROM alpine
 
 ARG build-sfdc-username
-ARG build-sfdc-password
-ARG build-sfdc-token
+ARG build-sfdc-passwordtoken
 ARG build-sfdc-serverurl
 
 RUN apk update
@@ -26,13 +25,16 @@ ENV ANT_HOME /usr/share/java/apache-ant
 ENV SALESFORCE_API_VERSION 38
 
 ENV SFDC_USERNAME ${build-sfdc-username:test-user-name@test.sfdc.org} 
-ENV SFDC_PASSWORD ${build-sfdc-password:testpass}
-ENV SFDC_TOKEN ${build-sfdc-token:testtoken}
+ENV SFDC_PASSWORDSFDC_TOKEN ${build-sfdc-passwordtoken:testpass}
 ENV SFDC_SERVERURL ${build-sfdc-serverurl:https://test.salesforce.com}
 
+RUN echo '***********************'
+
 RUN echo $SFDC_USERNAME
-RUN echo $SFDC_TOKEN
+RUN echo $SFDC_PASSWORDSFDC_TOKEN
 RUN echo $SFDC_SERVERURL
+
+RUN echo '***********************'
 
 RUN mkdir /usr/local/sfdc-build
 RUN mkdir /usr/local/sfdc-build/prod-metadata-backup
