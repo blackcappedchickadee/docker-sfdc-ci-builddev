@@ -18,7 +18,7 @@ RUN   apk update \
   &&   update-ca-certificates  
 
 ENV ANT_HOME /usr/share/java/apache-ant
-ENV SALESFORCE_API_VERSION 39
+ENV SALESFORCE_API_VERSION 38
 
 ENV SFDC_USERNAME test-user-name@test.sfdc.org
 ENV SFDC_PASSWORD testpass
