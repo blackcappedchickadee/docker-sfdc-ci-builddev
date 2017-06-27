@@ -22,6 +22,21 @@
                 testLevel="RunLocalTests">
         </sf:deploy>
     </target>
+    
+    <target name="retrieveUnpackaged" depends="deployInformation">
+      <echo level="info">*******************************************************</echo>
+      <echo level="info">*                                                     *</echo>
+      <echo level="info">*            Salesforce Org Metadata Backup           *</echo>
+      <echo level="info">*                                                     *</echo>
+      <echo level="info">*******************************************************</echo>
+      <sf:retrieve 
+          username="${sfdc.username}" 
+          password="${sfdc.password}" 
+          serverurl="${sfdc.serverurl}" 
+          maxPoll="${sf.maxPoll}" 
+          retrieveTarget="${basedir}/prod-metadata-backup" 
+          unpackaged="${basedir}/prod-metadata-backup/package.xml"/>
+    </target>
 
     <target name="deployInformation" depends="banner">
         <echo level="info"> Information for this deployment:</echo>
