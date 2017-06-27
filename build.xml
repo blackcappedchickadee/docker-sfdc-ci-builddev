@@ -34,7 +34,7 @@
           username="${sfdc.username}" 
           password="${sfdc.password}" 
           serverurl="${sfdc.serverurl}" 
-          maxPoll="${sf.maxPoll}" 
+          maxPoll="${sfdc.maxPoll}" 
           retrieveTarget="${basedir}/prod-metadata-backup" 
           unpackaged="${basedir}/prod-metadata-backup/package.xml"/>
     </target>
