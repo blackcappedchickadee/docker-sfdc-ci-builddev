@@ -2,7 +2,7 @@
 
     <taskdef uri="antlib:com.salesforce"
              resource="com/salesforce/antlib.xml"
-             classpath="ant-salesforce_39.jar"/>
+             classpath="ant-salesforce_38.jar"/>
 
     <property file="build.properties"/>
     <property environment="env"/>
