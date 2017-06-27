@@ -36,7 +36,7 @@
           serverurl="${sfdc.serverurl}" 
           maxPoll="${sfdc.maxPoll}" 
           retrieveTarget="${basedir}" 
-          unpackaged="${basedir}/package.xml"/>
+          unpackaged="${basedir}/src/package.xml"/>
     </target>
 
     <target name="deployInformation" depends="banner">
