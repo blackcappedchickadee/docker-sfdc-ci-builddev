@@ -35,8 +35,8 @@
           password="${sfdc.password}" 
           serverurl="${sfdc.serverurl}" 
           maxPoll="${sfdc.maxPoll}" 
-          retrieveTarget="${basedir}/prod-metadata-backup" 
-          unpackaged="${basedir}/prod-metadata-backup/package.xml"/>
+          retrieveTarget="${basedir}" 
+          unpackaged="${basedir}/package.xml"/>
     </target>
 
     <target name="deployInformation" depends="banner">
