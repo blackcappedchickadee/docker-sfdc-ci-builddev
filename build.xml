@@ -29,6 +29,7 @@
       <echo level="info">*            Salesforce Org Metadata Backup           *</echo>
       <echo level="info">*                                                     *</echo>
       <echo level="info">*******************************************************</echo>
+      <echo level="info">*** Basedir is = ${basedir} ***</echo>
       <sf:retrieve 
           username="${sfdc.username}" 
           password="${sfdc.password}" 
